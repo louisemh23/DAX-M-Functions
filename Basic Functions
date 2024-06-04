@@ -1,0 +1,10 @@
+#Date Buckets Relative to Today (DAX)
+  Time_Frame = VAR 
+  DaysDifference= 
+          DATEDIFF('Wip_By_Timeframe'[Date],TODAY(),Day) RETURN Switch(TRUE(),
+          DaysDifference <= 14, 1,        // Bucket 1 for dates within the last two weeks
+          DaysDifference <= 28, 2,        // Bucket 2 for dates between 2 and 4 weeks
+          DaysDifference <= 42, 3,        // Bucket 3 for dates between 4 and 6 weeks
+          4                               // Bucket 4 for dates older than 6 weeks
+          )
+
