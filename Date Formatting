@@ -1,4 +1,5 @@
 "Name of Month Year" "June 2024"  
     Formatted GL Month/Year = FORMAT('GL BALANCES'[GL_MONTH_YEAR],"MMMM yyyy")
+
 "Number of Month Year" "06 2024"  
     Formatted GL Month/Year = FORMAT('GL BALANCES'[GL_MONTH_YEAR],"MM yyyy")
